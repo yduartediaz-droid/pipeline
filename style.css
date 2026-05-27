@@ -1,0 +1,237 @@
+:root {
+    color-scheme: light;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    color: #1a1a1a;
+    background: #eef2f7;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #eef2f7 0%, #f8fbff 100%);
+    color: #1d2733;
+}
+
+.container {
+    width: min(1100px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.site-header {
+    background: rgba(255, 255, 255, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid rgba(30, 41, 59, 0.08);
+    backdrop-filter: blur(12px);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 0;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #0f172a;
+    text-decoration: none;
+}
+
+.main-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: #334155;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    color: #0f172a;
+}
+
+.hero {
+    padding: 100px 0 70px;
+    background: linear-gradient(135deg, #4263eb 0%, #0ea5e9 100%);
+    color: #ffffff;
+}
+
+.hero-content {
+    text-align: left;
+    max-width: 720px;
+}
+
+.hero .eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero h1 {
+    margin: 0 0 24px;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.05;
+}
+
+.hero p {
+    margin: 0 0 32px;
+    max-width: 620px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.05rem;
+}
+
+.section {
+    padding: 70px 0;
+}
+
+.section-light {
+    background: #ffffff;
+}
+
+.section-contact {
+    background: #f8fafc;
+}
+
+.card-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: 32px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+}
+
+.card h3 {
+    margin: 0 0 14px;
+    font-size: 1.2rem;
+}
+
+.card p {
+    margin: 0;
+    color: #475569;
+}
+
+.feature-list {
+    max-width: 720px;
+    margin: 24px auto 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 16px;
+}
+
+.feature-list li {
+    padding: 18px 22px;
+    border-radius: 16px;
+    background: #f1f5f9;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    color: #334155;
+}
+
+.contact-panel {
+    max-width: 780px;
+    padding: 48px;
+    border-radius: 28px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+    text-align: center;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+}
+
+main {
+    margin-top: 50px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 30px;
+    border-radius: 999px;
+    border: none;
+    background: #0f172a;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    background: #182a4c;
+}
+
+.button-secondary {
+    background: #2563eb;
+}
+
+.button-secondary:hover {
+    background: #1d4ed8;
+}
+
+.footer {
+    padding: 24px 0 32px;
+    text-align: center;
+    color: #64748b;
+}
+
+.footer-inner {
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+    padding-top: 18px;
+}
+
+@media (max-width: 720px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 80px 0 50px;
+    }
+
+    .hero-content,
+    .contact-panel {
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+    }
+}

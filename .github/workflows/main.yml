@@ -1,0 +1,21 @@
+name: CI Pipeline
+
+on: [push]
+
+jobs:
+
+  quality-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clona repository
+        uses: actions/checkout@v4
+
+      - name: Installa htmlhint
+        run: npm install -g htmlhint
+
+      - name: Controlla file HTML
+        run: htmlhint "*.html"
+
+      - name: Controlla link rotti
+        uses: lycheeverse/lychee-action@v1
